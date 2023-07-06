@@ -1,26 +1,21 @@
 import React from 'react'
-import {StyleSheet, View, Text} from 'react-native'
-import AndtDesign from 'react-native-vector-icons/AntDesign'
+import {SafeAreaView, ScrollView, StyleSheet} from 'react-native'
+import {FeedPost} from './components/FeedPost'
 
 const App = () => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Hello Pinazza</Text>
-      <AndtDesign name="dingding" size={40} />
-    </View>
+    <SafeAreaView>
+      <ScrollView>
+        <FeedPost />
+      </ScrollView>
+    </SafeAreaView>
   )
 }
 
 export default App
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: 10
-  },
-  text: {
-    fontSize: 24
+  app: {
+    flex: 1
   }
 })
